@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-secondary: #fbeed6;
+  --primary-color: #e87131;
+  --text-words: #5a6359;
+  --small-card-bg: #fdf9ec;
+  --big-card-bg: rgb(255 254 249);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fbeed6;
+  color: #5a6359;
+  font-family: 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Global Browser & Container Scrollbar in Primary Theme Color (#e87131) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fbeed6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e87131 !important;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c9561c !important;
+}
+
+/* Firefox Custom Scrollbar Styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #e87131 #fbeed6;
+}
+
+/* Custom Scrollbar Utility */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #fbeed6;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #e87131 !important;
+  border-radius: 4px;
+}
+
+/* Polished 3D Card Picking Elevation Effect */
+.card-pick-elevation {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+              border-color 0.25s ease !important;
+  border: 1px solid #fbeed6 !important;
+  border-bottom: 3.5px solid rgba(232, 113, 49, 0.35) !important;
+  box-shadow: 0 4px 8px -2px rgba(90, 99, 89, 0.06) !important;
+}
+
+.card-pick-elevation:hover,
+.card-pick-elevation:active {
+  transform: translateY(-5px) scale(1.015) !important;
+  border-color: #e87131 !important;
+  border-bottom: 4.5px solid #e87131 !important;
+  box-shadow: 0 14px 24px -4px rgba(232, 113, 49, 0.22), 0 6px 12px -2px rgba(90, 99, 89, 0.08) !important;
+}
+
+/* Force Light Warm Background for Antd Modals */
+.ant-modal-content,
+.ant-modal-header,
+.ant-modal-body,
+.ant-modal-footer {
+  background-color: rgb(255 254 249) !important;
+  color: #5a6359 !important;
+}
+
+.ant-modal-content {
+  border: 1px solid #fbeed6 !important;
+  border-radius: 24px !important;
+  box-shadow: 0 20px 25px -5px rgba(232, 113, 49, 0.1), 0 8px 10px -6px rgba(90, 99, 89, 0.05) !important;
+}
+
+.ant-modal-header {
+  border-bottom: 1px solid #fbeed6 !important;
+}
+
+.ant-modal-title {
+  color: #5a6359 !important;
+}
+
+/* Force Crisp Warm Background for Antd Popovers */
+.ant-popover-inner,
+.ant-popover-inner-content {
+  background-color: rgb(255 254 249) !important;
+  color: #5a6359 !important;
+  border: 2px solid #e87131 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 12px 28px -5px rgba(232, 113, 49, 0.25) !important;
+}
+
+.ant-popover-arrow::after,
+.ant-popover-arrow::before {
+  background-color: rgb(255 254 249) !important;
+}
